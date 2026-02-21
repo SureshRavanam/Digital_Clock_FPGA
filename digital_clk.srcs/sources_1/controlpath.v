@@ -66,8 +66,8 @@ output reg rst_hr
             n_state<=s1; end
             s1: begin 
                 if(sec==6'd58&&min!=6'd59&&hr!=6'd24) n_state<=s2;
-                else if(min==6'd59&&sec==6'd58&&hr!=6'd23) n_state<=s3;
-                else if(hr==6'd23&&min==6'd59&&sec==6'd58) n_state<=s0;
+                else if(sec==6'd58&&min==6'd59&&hr!=6'd23) n_state<=s3;
+                else if(sec==6'd58&&min==6'd59&&hr==6'd23) n_state<=s0;
                 else n_state<=s1; end
             s2: n_state<=s1;  
             s3: n_state<=s1;
